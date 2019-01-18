@@ -2,9 +2,21 @@
 
 ![](https://img.shields.io/badge/version-v2-brightgreen.svg)
 
-MORAN is a network with rectification mechanism for general scene text recognition. The paper (accepted by **the journal of Pattern Recognition**) in [arXiv](https://arxiv.org/abs/1901.03003) version is available now. 
+| <center>Python 2.7</center> | <center>Python 3.6</center> |
+| :---: | :---: |
+| <center>[![Build Status](https://travis-ci.org/Canjie-Luo/MORAN_v2.svg?branch=master)](https://travis-ci.org/Canjie-Luo/MORAN_v2)</center> | <center>[![Build Status](https://travis-ci.org/Canjie-Luo/MORAN_v2.svg?branch=master)](https://travis-ci.org/Canjie-Luo/MORAN_v2)</center> |
+
+MORAN is a network with rectification mechanism for general scene text recognition. The paper (accepted to appear in Pattern Recognition, 2019) in [arXiv](https://arxiv.org/abs/1901.03003), [online](https://www.sciencedirect.com/science/article/pii/S0031320319300263?via%3Dihub) version is available now.
+
+[Here is a brief introduction in Chinese.](https://mp.weixin.qq.com/s/XbT_t_9C__KdyCCw8CGDVA)
 
 ![](demo/MORAN_v2.gif)
+
+## Recent Update
+
+Thanks the great help from [@Christian Clauss](https://github.com/cclauss)!
+
+- Support [Python 3](https://www.python.org/).
 
 ## Improvements of MORAN v2:
 
@@ -21,21 +33,24 @@ MORAN is a network with rectification mechanism for general scene text recogniti
 
 ## Requirements
 
+(Welcome to develop MORAN together.)
+
+We recommend you to use [Anaconda](https://www.anaconda.com/) to manage your libraries.
+
+- [Python 2.7 or Python 3.6](https://www.python.org/) (Python 3 is faster than Python 2)
 - [PyTorch](https://pytorch.org/) 0.3.*
 - [TorchVision](https://pypi.org/project/torchvision/)
-- [Python](https://www.python.org/) 2.7.*
-- [OpenCV](https://opencv.org/) 2.4.*
+- [OpenCV](https://opencv.org/)
 - [PIL (Pillow)](https://pillow.readthedocs.io/en/stable/#)
+- [Colour](https://pypi.org/project/colour/)
+- [LMDB](https://pypi.org/project/lmdb/)
+- [matplotlib](https://pypi.org/project/matplotlib/)
 
-Use [pip](https://pypi.org/project/pip/) to install the following libraries.
+Or use [pip](https://pypi.org/project/pip/) to install the libraries. (Maybe the torch is different from the anaconda version. Please check carefully and fix the warnings in training stage if necessary.)
 
 ```bash
     pip install -r requirements.txt
 ```
-
-- [Colour](https://pypi.org/project/colour/)
-- [LMDB](https://pypi.org/project/lmdb/)
-- [matplotlib](https://pypi.org/project/matplotlib/)
 
 ## Data Preparation
 Please convert your own dataset to **LMDB** format by using the [tool](https://github.com/bgshih/crnn/blob/master/tool/create_dataset.py) provided by [@Baoguang Shi](https://github.com/bgshih). 
@@ -64,7 +79,13 @@ And start training: (manually decrease the learning rate for your task)
 
 ## Demo
 
-Download the model parameter file `demo.pth` from the link above and put it into root folder. Then, execute the `demo.py` for more visualizations.
+Download the model parameter file `demo.pth`.
+
+- [BaiduYun](https://pan.baidu.com/s/1TqZfvoEhyv57yf4YBjSzFg) (password: l8em)
+- [Google Drive](https://drive.google.com/file/d/1IDvT51MXKSseDq3X57uPjOzeSYI09zip/view?usp=sharing)
+- [OneDrive](https://1drv.ms/u/s!Am3wqyDHs7r0hkAl0AtRIODcqOV3)
+
+Put it into root folder. Then, execute the `demo.py` for more visualizations.
 
 ```bash
 	python demo.py
